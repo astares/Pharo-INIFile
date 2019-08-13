@@ -56,6 +56,16 @@ stream close.
 
 file sections inspect"
 ```
+## Reading from an INI File using specific encoding
+If you need a specific encoding use one of the encoding schemes:
+
+```Smalltalk
+|file section stream|
+stream := 'aspnet_perf.ini' asFileReference readStreamEncoded: 'utf16le'.
+file := INIFile readFrom: stream.
+stream close.
+file sections inspect 
+```
 
 ## Video
 [![Watch the video](https://img.youtube.com/vi/Ifqb_vslzTE/hqdefault.jpg)](https://youtu.be/Ifqb_vslzTE)
