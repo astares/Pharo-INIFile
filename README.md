@@ -53,6 +53,8 @@ section := file section: 'First section'.
 (section at: 'key1') inspect.
 
 stream close.
+
+file sections inspect"
 ```
 
 ## Video
