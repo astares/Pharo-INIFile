@@ -1,7 +1,21 @@
 # Pharo-INIFile
 Parser for .INI files (as often used on Windows)
 
-#Usage
+# Quick Start
+## Installation via Catalog
+
+You can install Pomodoro directly from the Pharo catalog.
+
+## Installation via Script
+
+```Smalltalk
+Metacello new 
+	repository: 'github://astares/Pharo-INIFile/src';
+	baseline: 'INIFile';
+	load
+```
+
+# Usage
 The project includes a class **INIFile** that represent an INI file. An INI file is typically stored
 as a file with an *.ini extension and holds initialization values for an application in the following format:
 
