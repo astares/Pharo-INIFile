@@ -78,7 +78,7 @@ INIFileSection >> label [
 
 { #category : #private }
 INIFileSection >> writeOn: aStream [
-	aStream nextPutAll: '[', self label, ']'; cr.
+	aStream nextPutAll: '[', self label, ']'; crlf.
 	self associationsDo:
-		[:assoc | aStream nextPutAll: assoc key, '=', (assoc value ifNil: ['']); cr]
+		[:assoc | aStream nextPutAll: assoc key, '=', (assoc value ifNil: ['']); crlf]
 ]
