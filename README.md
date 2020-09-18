@@ -4,7 +4,7 @@ Parser for .INI files (as often used on Windows)
 # Quick Start
 ## Installation via Catalog
 
-You can install Pomodoro directly from the Pharo catalog.
+You can install the project directly from the Pharo catalog.
 
 ## Installation via Script
 
