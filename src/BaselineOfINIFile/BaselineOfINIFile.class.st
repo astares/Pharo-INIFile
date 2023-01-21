@@ -1,5 +1,7 @@
 "
 A baseline for INIFile implementation for Pharo
+
+See [https://github.com/astares/Pharo-INIFile](https://github.com/astares/Pharo-INIFile)
 "
 Class {
 	#name : #BaselineOfINIFile,
@@ -21,6 +23,7 @@ BaselineOfINIFile >> baseline: spec [
 			spec	
 				group: 'Core' with: #('INIFile-Core');
 				group: 'Tests' with: #('INIFile-Tests-Core');
+				group: 'CI' with: #('Tests');
 				group: 'all' with: #('Core' 'Tests');
 				group: 'default' with: #('all') ]
 ]
