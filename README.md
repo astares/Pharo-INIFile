@@ -10,7 +10,7 @@ You can install the project directly from the Pharo catalog.
 
 ```Smalltalk
 Metacello new 
-	repository: 'github://astares/Pharo-INIFile/src';
+	repository: 'github://astares/Pharo-INIFile:main/src';
 	baseline: 'INIFile';
 	load
 ```
