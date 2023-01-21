@@ -1,10 +1,15 @@
 # Pharo-INIFile
 Parser for .INI files (as often used on Windows)
 
-# Quick Start
-## Installation via Catalog
+[![Unit Tests](https://github.com/astares/Pharo-INIFile/workflows/Unit%20Tests/badge.svg?branch=main)](https://github.com/astares/Pharo-INIFile/actions?query=workflow%3AUnit%20Tests)
+[![Coverage Status](https://codecov.io/github/astares/Pharo-INIFile/coverage.svg?branch=main)](https://codecov.io/gh/astares/Pharo-INIFile/branch/main)
 
-You can install the project directly from the Pharo catalog.
+
+[![Pharo 9](https://img.shields.io/badge/Pharo-9.0-%23aac9ff.svg)](https://pharo.org/download)
+[![Pharo 10](https://img.shields.io/badge/Pharo-10-%23aac9ff.svg)](https://pharo.org/download)
+[![Pharo 11](https://img.shields.io/badge/Pharo-11-%23aac9ff.svg)](https://pharo.org/download)
+
+# Quick Start
 
 ## Installation via Script
 
