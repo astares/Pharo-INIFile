@@ -47,7 +47,7 @@ INIFile class >> addSettingFrom: lineString to: section [
 	stream := lineString readStream.
 	key := (stream upTo: $=) trimBoth.
 	value := (stream upToEnd) trimBoth.
-	section at: key put: (value isEmpty ifTrue: [nil] ifFalse: [value]).
+	section at: key put: (value isEmpty ifTrue: [nil] ifFalse: [value])
 ]
 
 { #category : #private }
@@ -71,7 +71,7 @@ INIFile class >> readFrom: aStream [
 	| section line ini |
 	section := nil.
 	ini := self new.
-	
+
 	[aStream atEnd] whileFalse:
 		[line := aStream nextLine trimBoth.
 		line isEmpty ifFalse:
@@ -80,7 +80,7 @@ INIFile class >> readFrom: aStream [
 					{[$[] -> [section := Dictionary new.  ini sectionDictionaries add: (self labelFrom: line) -> section].
 					[$;] -> ["ignore comment line"].}
 				otherwise: [section ifNotNil: [self addSettingFrom: line to: section]]]].
-	
+
 	^ ini
 ]
 
@@ -93,7 +93,7 @@ INIFile >> ensureSectionDictionary: label [
 
 { #category : #testing }
 INIFile >> includesSection: label [
-	^ self sectionDictionaries anySatisfy: [:each | each key = label ] 
+	^ self sectionDictionaries anySatisfy: [:each | each key = label ]
 ]
 
 { #category : #accessing }

@@ -17,7 +17,7 @@ INIFileSection class >> named: nameString on: anINIFile [
 ]
 
 { #category : #'instance creation' }
-INIFileSection class >> on: anINIFile label: labelString [ 
+INIFileSection class >> on: anINIFile label: labelString [
 	^ self basicNew initializeWithINIFile: anINIFile label: labelString
 ]
 
@@ -61,13 +61,13 @@ INIFileSection >> iniFile [
 { #category : #initialization }
 INIFileSection >> initializeWithINIFile: anINIFile label: labelString [
 	iniFile := anINIFile.
-	label := labelString.
+	label := labelString
 ]
 
 { #category : #testing }
 INIFileSection >> isEmpty [
 	self associationsDo: [:ea | ^ false].
-	
+
 	^ true
 ]
 

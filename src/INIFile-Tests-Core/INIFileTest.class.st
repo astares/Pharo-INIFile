@@ -10,7 +10,7 @@ INIFileTest >> testBatchAddition [
 	ini := INIFile new.
 	dict := Dictionary newFrom: {'key1'->'val1'. 'key2'->'val2'}.
 	(ini section: 'foo') addAll: dict.
-	
+
 	self assert: ((ini section: 'foo') at: 'key1') equals: 'val1'.
 	self assert: ((ini section: 'foo') at: 'key2') equals: 'val2'
 ]
@@ -60,7 +60,6 @@ INIFileTest >> testHasSection [
 	self deny: (ini includesSection: 'foo').
 	section at: 'bar' put: 'baz'.
 	self assert: (ini includesSection: 'foo')
-	
 ]
 
 { #category : #tests }
@@ -71,7 +70,7 @@ INIFileTest >> testIteration [
 	(ini section: 'foo') at: 'key2' put: 'val2'.
 	(ini section: 'bar') at: 'key1' put: 'val1'.
 	(ini section: 'bar') at: 'key2' put: 'val2'.
-	
+
 	self assert: ini sections size equals: 2.
 	ini sectionsDo: [:ea | self assert: ea associations size equals: 2 ]
 ]
@@ -86,12 +85,12 @@ INIFileTest >> testMultipleSections [
 	(out section: 'bar') at: 'key2' put: 'val2'.
 	stream := WriteStream on: String new.
 	out writeOn: stream.
-	
+
 	in := INIFile readFrom: stream contents readStream.
-	self assert: ((in section: 'foo') at: 'key1') = 'val1'.
-	self assert: ((in section: 'foo') at: 'key2') = 'val2'.
-	self assert: ((in section: 'bar') at: 'key1') = 'val1'.
-	self assert: ((in section: 'bar') at: 'key2') = 'val2'.
+	self assert: ((in section: 'foo') at: 'key1') equals: 'val1'.
+	self assert: ((in section: 'foo') at: 'key2') equals: 'val2'.
+	self assert: ((in section: 'bar') at: 'key1') equals: 'val1'.
+	self assert: ((in section: 'bar') at: 'key2') equals: 'val2'
 ]
 
 { #category : #tests }
@@ -101,14 +100,12 @@ INIFileTest >> testNilValueOnWrite [
 	(out section: 'foo') at: 'key1' put: nil.
 	stream := WriteStream on: String new.
 	out writeOn: stream.
-	
+
 	expected := '[foo]
 key1=
 '.
-	
-	self assert: expected equals: stream contents
 
-	
+	self assert: expected equals: stream contents
 ]
 
 { #category : #tests }
@@ -119,7 +116,6 @@ INIFileTest >> testSectionIsEmpty [
 	self assert: section isEmpty.
 	section at: 'bar' put: 'baz'.
 	self deny: section isEmpty
-	
 ]
 
 { #category : #tests }
@@ -130,8 +126,8 @@ INIFileTest >> testSingleSection [
 	(out section: 'foo') at: 'key2' put: 'val2'.
 	stream := WriteStream on: String new.
 	out writeOn: stream.
-	
+
 	foo := (INIFile readFrom: stream contents readStream) section: 'foo'.
 	self assert: (foo at: 'key1') equals: 'val1'.
-	self assert: (foo at: 'key2') equals: 'val2'.
+	self assert: (foo at: 'key2') equals: 'val2'
 ]

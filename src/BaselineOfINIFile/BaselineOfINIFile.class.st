@@ -15,12 +15,12 @@ BaselineOfINIFile >> baseline: spec [
 	spec
 		for: #common do: [
 			"Packages"
-			spec 
+			spec
 				package: 'INIFile-Core';
 				package: 'INIFile-Tests-Core' with: [ spec requires: #('INIFile-Core') ].
-			
-			"Groups"	
-			spec	
+
+			"Groups"
+			spec
 				group: 'Core' with: #('INIFile-Core');
 				group: 'Tests' with: #('INIFile-Tests-Core');
 				group: 'CI' with: #('Tests');
