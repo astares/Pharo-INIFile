@@ -1,7 +1,7 @@
 # Pharo-INIFile
 Parser for .INI files (as often used on Windows)
 
-[![Unit Tests](https://github.com/astares/Pharo-INIFile/workflows/Unit%20Tests/badge.svg?branch=main)](https://github.com/astares/Pharo-INIFile/actions?query=workflow%3AUnit%20Tests)
+[![Unit Tests](https://github.com/astares/Pharo-INIFile/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/astares/Pharo-INIFile/actions/workflows/unit-tests.yml)
 [![Coverage Status](https://codecov.io/github/astares/Pharo-INIFile/coverage.svg?branch=main)](https://codecov.io/gh/astares/Pharo-INIFile/branch/main)
 
 
