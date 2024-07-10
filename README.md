@@ -2,6 +2,7 @@
 Parser for .INI files (as often used on Windows) for [Pharo](https://www.pharo.org)
 
 [![Pharo](https://img.shields.io/static/v1?style=for-the-badge&message=Pharo&color=3297d4&logo=Harbor&logoColor=FFFFFF&label=)](https://www.pharo.org) 
+
 [![Unit Tests](https://github.com/astares/Pharo-INIFile/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/astares/Pharo-INIFile/actions/workflows/unit-tests.yml)
 [![Coverage Status](https://codecov.io/github/astares/Pharo-INIFile/coverage.svg?branch=main)](https://codecov.io/gh/astares/Pharo-INIFile/branch/main)
 
